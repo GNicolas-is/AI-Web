@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-primary-fixed: #003e03;
+  --color-on-secondary-container: #ebffca;
+  --color-secondary: #a5fa00;
+  --color-on-primary: #005406;
+  --color-on-secondary: #395b00;
+  --color-surface-container-highest: #262626;
+  --color-outline: #767575;
+  --color-inverse-primary: #006f0a;
+  --color-inverse-surface: #fcf9f8;
+  --color-primary-fixed: #59ee50;
+  --color-on-error: #450900;
+  --color-secondary-fixed: #a5fa00;
+  --color-on-primary-fixed-variant: #005f07;
+  --color-on-surface-variant: #adaaaa;
+  --color-surface-container-low: #131313;
+  --color-primary: #59ee50;
+  --color-tertiary-dim: #00deed;
+  --color-surface-bright: #2c2c2c;
+  --color-on-tertiary-fixed-variant: #005e65;
+  --color-on-surface: #ffffff;
+  --color-on-secondary-fixed-variant: #416600;
+  --color-tertiary: #92f5ff;
+  --color-on-error-container: #ffd2c8;
+  --color-inverse-on-surface: #565555;
+  --color-surface-container: #1a1a1a;
+  --color-error-dim: #d53d18;
+  --color-tertiary-container: #19edfd;
+  --color-outline-variant: #484847;
+  --color-on-tertiary-container: #00535a;
+  --color-tertiary-fixed-dim: #00deed;
+  --color-tertiary-fixed: #19edfd;
+  --color-on-primary-container: #002a01;
+  --color-background: #0e0e0e;
+  --color-on-secondary-fixed: #2c4700;
+  --color-surface-tint: #59ee50;
+  --color-surface-container-high: #20201f;
+  --color-secondary-fixed-dim: #9aea00;
+  --color-primary-dim: #49e043;
+  --color-surface-variant: #262626;
+  --color-error-container: #b92902;
+  --color-on-background: #ffffff;
+  --color-secondary-dim: #9aea00;
+  --color-secondary-container: #436900;
+  --color-surface: #0e0e0e;
+  --color-primary-fixed-dim: #49e043;
+  --color-on-tertiary-fixed: #003f44;
+  --color-surface-container-lowest: #000000;
+  --color-on-tertiary: #005d64;
+  --color-primary-container: #0fba1e;
+  --color-surface-dim: #0e0e0e;
+  --color-error: #ff7351;
+
+  --font-headline: "Epilogue", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Lexend", sans-serif;
+
+  --radius-default: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-body selection:bg-primary selection:text-on-primary;
+  }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 15px rgba(89, 238, 80, 0.3);
+  }
+
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+  }
+
+  .bg-mesh {
+    background-color: #0e0e0e;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(89, 238, 80, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(165, 250, 0, 0.05) 0px, transparent 50%);
+  }
+
+  .no-scrollbar::-webkit-scrollbar { 
+    display: none; 
+  }
+}
